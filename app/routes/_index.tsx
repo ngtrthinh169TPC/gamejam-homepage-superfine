@@ -5,7 +5,7 @@ import { FirstJam } from "~/components/FirstJam";
 import { Navbar } from "~/components/Navbar";
 import { allData } from "~/frontend_test_homepage_data";
 
-export const meta: MetaFunction = () => [{ title: "Gamejam" }];
+export const meta: MetaFunction = () => [{ title: "GameJam" }];
 
 export default function Index() {
   return (
