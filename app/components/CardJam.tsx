@@ -42,7 +42,7 @@ export const CardJam = (jam: Jam) => {
             Starts in {diffNow.days} days, {diffNow.hours} hours
           </p>
           <div className="h-4 w-full rounded-full bg-slate-600">
-            <div className="h-full w-1/3 rounded-full bg-purple-400"></div>
+            <div className="from-gamejam-blue-100 to-gamejam-purple-100 h-full w-1/3 rounded-full bg-gradient-to-r"></div>
           </div>
           <div className="flex gap-20 italic">
             <p>{jam.joinedCount} Joined</p>

@@ -45,7 +45,7 @@ export const FirstJam = (jam: Jam) => {
       <img
         src={jam.coverImageUrl}
         alt={`jam-cover-${jam.name}`}
-        className="h-60 w-full bg-slate-500 sm:h-80 sm:w-1/2"
+        className="h-60 w-full bg-slate-500 object-cover object-center sm:h-80 sm:w-1/2"
       />
       <div className="flex h-fit w-full flex-col gap-4 px-8 pb-6 pt-4 sm:h-80 sm:w-1/2 sm:gap-6 sm:px-16 sm:py-12">
         <div>
@@ -75,7 +75,7 @@ export const FirstJam = (jam: Jam) => {
           </div>
         </div>
         <div className="flex sm:justify-center">
-          <button className="w-fit rounded-full bg-purple-500 px-4 py-2 font-medium tracking-wide">
+          <button className="from-gamejam-blue-100 to-gamejam-purple-100 hover:from-gamejam-blue-200 hover:to-gamejam-purple-200 w-fit rounded-full bg-gradient-to-r px-4 py-2 font-medium tracking-wide">
             JOIN NOW!
           </button>
         </div>
