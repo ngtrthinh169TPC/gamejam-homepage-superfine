@@ -2,7 +2,7 @@ import type { Game } from "~/frontend_test_homepage_data";
 
 export const CardGame = (game: Game) => {
   return (
-    <div className="h-60 rounded-2xl bg-slate-500">
+    <div className="h-60 rounded-2xl bg-slate-700">
       {game.thumbnailImageUrl ? (
         <img
           src={game.thumbnailImageUrl}

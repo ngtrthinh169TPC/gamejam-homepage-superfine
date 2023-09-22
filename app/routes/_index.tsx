@@ -27,7 +27,9 @@ export default function Index() {
           })}
         </div>
         <div className="flex justify-end pt-4">
-          <button className="">VIEW MORE</button>
+          <button className="rounded-full border-2 border-slate-500 px-2 py-1">
+            VIEW MORE
+          </button>
         </div>
       </div>
       <div className="w-full flex-col px-4 sm:px-16">
@@ -40,7 +42,9 @@ export default function Index() {
           })}
         </div>
         <div className="flex justify-end pt-4">
-          <button className="">VIEW MORE</button>
+          <button className="rounded-full border-2 border-slate-500 px-2 py-1">
+            VIEW MORE
+          </button>
         </div>
       </div>
     </main>

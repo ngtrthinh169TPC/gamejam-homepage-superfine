@@ -22,23 +22,33 @@ export const CardJam = (jam: Jam) => {
   }, [jam.startTime]);
 
   return (
-    <div className="h-60 rounded-2xl bg-slate-500">
+    <div className="h-72 rounded-2xl bg-slate-700">
       <img
         src={jam.thumbnailImageUrl}
         alt={`jam-${jam.name}-thumbnail`}
         className="h-32 w-full rounded-2xl object-cover object-center"
       />
-      <h2>{jam.name.toUpperCase()}</h2>
-      <p>
-        Hosted by {jam.hostProfiles.map((host) => host.username).join(", ")}
-      </p>
-      <p>
-        Starts in {diffNow.days} days, {diffNow.hours} hours
-      </p>
-      <div>A progress bar</div>
-      <div className="flex gap-8">
-        <p>{jam.joinedCount} joined</p>
-        <p>{jam.submissionCount} submissions</p>
+      <div className="flex flex-col gap-2 px-4 py-2">
+        <div>
+          <h2 className="text-2xl font-bold tracking-wider">
+            {jam.name.toUpperCase()}
+          </h2>
+          <p className="text-purple-400">
+            Hosted by {jam.hostProfiles.map((host) => host.username).join(", ")}
+          </p>
+        </div>
+        <div className="flex flex-col gap-1">
+          <p className="italic">
+            Starts in {diffNow.days} days, {diffNow.hours} hours
+          </p>
+          <div className="h-4 w-full rounded-full bg-slate-600">
+            <div className="h-full w-1/3 rounded-full bg-purple-400"></div>
+          </div>
+          <div className="flex gap-20 italic">
+            <p>{jam.joinedCount} Joined</p>
+            <p>{jam.submissionCount} Submissions</p>
+          </div>
+        </div>
       </div>
     </div>
   );
