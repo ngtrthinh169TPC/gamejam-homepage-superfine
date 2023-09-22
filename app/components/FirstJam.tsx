@@ -47,7 +47,7 @@ export const FirstJam = (jam: Jam) => {
         alt={`jam-cover-${jam.name}`}
         className="h-60 w-full bg-slate-500 sm:h-80 sm:w-1/2"
       />
-      <div className="flex h-fit w-full flex-col gap-4 px-8 py-4 sm:h-80 sm:w-1/2 sm:gap-6 sm:px-16 sm:py-12">
+      <div className="flex h-fit w-full flex-col gap-4 px-8 pb-6 pt-4 sm:h-80 sm:w-1/2 sm:gap-6 sm:px-16 sm:py-12">
         <div>
           <h1 className="text-3xl font-bold tracking-wider text-white">
             {jam.name.toUpperCase()}
@@ -74,7 +74,7 @@ export const FirstJam = (jam: Jam) => {
             <DisplayCount label="submissions" value={jam.submissionCount} />
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex sm:justify-center">
           <button className="w-fit rounded-full bg-purple-500 px-4 py-2 font-medium tracking-wide">
             JOIN NOW!
           </button>
