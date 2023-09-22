@@ -47,17 +47,17 @@ export const FirstJam = (jam: Jam) => {
         alt={`jam-cover-${jam.name}`}
         className="h-60 w-full bg-slate-500 sm:h-80 sm:w-1/2"
       />
-      <div className="flex h-60 w-full flex-col gap-6 px-16 py-12 sm:h-80 sm:w-1/2">
+      <div className="flex h-fit w-full flex-col gap-4 px-8 py-4 sm:h-80 sm:w-1/2 sm:gap-6 sm:px-16 sm:py-12">
         <div>
-          <h1 className="text-3xl font-bold tracking-wider">
+          <h1 className="text-3xl font-bold tracking-wider text-white">
             {jam.name.toUpperCase()}
           </h1>
           <p className="italic text-purple-400">
             Hosted by {jam.hostProfiles.map((host) => host.username).join(", ")}
           </p>
         </div>
-        <div className="flex items-end">
-          <div className="w-1/2">
+        <div className="flex flex-col items-end gap-4 sm:flex-row sm:gap-0">
+          <div className="w-full sm:w-1/2">
             <p>Starts in</p>
             <div className="flex">
               <DisplayCount label="days" value={diffNow.days || 0} padding />
@@ -69,7 +69,7 @@ export const FirstJam = (jam: Jam) => {
               />
             </div>
           </div>
-          <div className="flex">
+          <div className="flex w-full sm:w-1/2">
             <DisplayCount label="joined" value={jam.joinedCount} />
             <DisplayCount label="submissions" value={jam.submissionCount} />
           </div>
