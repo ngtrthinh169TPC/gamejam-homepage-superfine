@@ -16,9 +16,9 @@ Assessment will be based on a few criteria:
 
 ## Solution
 
-This is a solution I've create with Indie Stack from Remix.run framework, using mainly **ReactJs** and Tailwind. I also used Luxon for datetime utilities.
+This is a solution I've create with [Indie Stack](https://github.com/remix-run/indie-stack) from [Remix.run](https://remix.run/) framework, using mainly **ReactJs** and Tailwind. I also used [Luxon](https://moment.github.io/luxon) for datetime utilities.
 
-This solution is deployed with Fly.io at [this link](https://gamejam-homepage-superfine.fly.dev/).
+This solution is deployed with [Fly.io](https://fly.io/) at [this link](https://gamejam-homepage-superfine.fly.dev/).
 
 The code for the main page can be found at [/app/routes/\_index.tsx](/app/routes/_index.tsx), and components that is being used can be found at [/app/components/](/app/components/).
 
