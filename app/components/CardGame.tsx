@@ -7,7 +7,7 @@ export const CardGame = (game: Game) => {
         <img
           src={game.thumbnailImageUrl}
           alt={`jam-${game.name}-cover`}
-          className="h-32 w-full rounded-2xl object-cover"
+          className="h-32 w-full rounded-2xl object-cover object-center"
         />
       ) : (
         <div className="h-32 w-full rounded-2xl bg-slate-400" />

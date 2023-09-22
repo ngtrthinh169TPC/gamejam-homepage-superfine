@@ -12,8 +12,10 @@ const DisplayCount = ({
   padding?: boolean;
 }) => {
   return (
-    <div>
-      <p>{padding ? value.toString().padStart(2, "0") : value}</p>
+    <div className="w-16">
+      <p className="text-3xl font-medium">
+        {padding ? value.toString().padStart(2, "0") : value}
+      </p>
       <p>{label}</p>
     </div>
   );
@@ -45,13 +47,17 @@ export const FirstJam = (jam: Jam) => {
         alt={`jam-cover-${jam.name}`}
         className="h-60 w-full bg-slate-500 sm:h-80 sm:w-1/2"
       />
-      <div className="h-60 w-full sm:h-80 sm:w-1/2">
-        <h1>{jam.name.toUpperCase()}</h1>
-        <p>
-          Hosted by {jam.hostProfiles.map((host) => host.username).join(", ")}
-        </p>
+      <div className="flex h-60 w-full flex-col gap-6 px-16 py-12 sm:h-80 sm:w-1/2">
+        <div>
+          <h1 className="text-3xl font-bold tracking-wider">
+            {jam.name.toUpperCase()}
+          </h1>
+          <p className="italic text-purple-400">
+            Hosted by {jam.hostProfiles.map((host) => host.username).join(", ")}
+          </p>
+        </div>
         <div className="flex items-end">
-          <div>
+          <div className="w-1/2">
             <p>Starts in</p>
             <div className="flex">
               <DisplayCount label="days" value={diffNow.days || 0} padding />
@@ -68,7 +74,11 @@ export const FirstJam = (jam: Jam) => {
             <DisplayCount label="submissions" value={jam.submissionCount} />
           </div>
         </div>
-        <button>JOIN NOW!</button>
+        <div className="flex justify-center">
+          <button className="w-fit rounded-full bg-purple-500 px-4 py-2 font-medium tracking-wide">
+            JOIN NOW!
+          </button>
+        </div>
       </div>
     </div>
   );

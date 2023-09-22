@@ -26,7 +26,7 @@ export const CardJam = (jam: Jam) => {
       <img
         src={jam.thumbnailImageUrl}
         alt={`jam-${jam.name}-thumbnail`}
-        className="h-32 w-full rounded-2xl object-cover"
+        className="h-32 w-full rounded-2xl object-cover object-center"
       />
       <h2>{jam.name.toUpperCase()}</h2>
       <p>
